@@ -9,3 +9,4 @@ https://github.com/ALOHA-CLASS/SPRING_BOARD_TEST.git
 3. 준비 파일의 BoardApplicationTests.java 테스트 코드로 검증한다.
 
 4. 완성한 board 프로젝트를 GITHUB 에 올리고 제출한다. 
+   * GITHUB 레포지토리 명 : BOARD_TEST_KJE
