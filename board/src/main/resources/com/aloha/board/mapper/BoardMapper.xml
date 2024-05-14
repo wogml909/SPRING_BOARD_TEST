@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aloha.board.mapper.BoardMapper">
+
+    <select id="list" resultType="Board">
+        select *
+        FROM board
+        order by reg_date desc
+    </select>
+    <select id="select" resultType="Board">
+        select *
+        from board
+        where no = #{no}
+    </select>
+
+    <insert id="insert">
+        insert into board(title, writer,content)
+        VALUES (#{title}, #{writer}, #{content})
+    </insert>
+
+    <update id="update">
+        update board
+        sat title = #{title}
+            ,writer = #{writer}
+            ,content = #{contnet}
+            ,upd_date = now()
+        where no = #{no}
+    </update>
+
+    <delete id="delete">
+        delete from board
+        where no = #{no}
+    </delete>
+
+</mapper>
